@@ -37,6 +37,7 @@
     ]
   }]
   //4、将第三步放入到Router里面{Routes}
+  import Routes from "../Component/Routes";
   export default class Main extends Component {
     render(){
       return (
