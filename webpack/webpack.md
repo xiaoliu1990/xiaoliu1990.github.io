@@ -17,3 +17,9 @@ plugins: [
     })
   ]
 ```
+3、UglifyJsPlugin 压缩代码的插件(这个可以很显著的缩小包的体积，但是我用上后感觉没啥用，js文件并没有减少，或者用的不对)
+```javascript
+new webpack.optimize.UglifyJsPlugin({ 
+  compress: { warnings: false } 
+}),
+```
