@@ -3,6 +3,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+      
+      
+      
       
       
       
@@ -207,14 +211,52 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <h1 class="mume-header" id="react-router%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">react-router&#x6309;&#x9700;&#x52A0;&#x8F7D;&#x95EE;&#x9898;&#x89E3;&#x51B3;</h1>
+      <h1 class="mume-header" id="react-router-3%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">react-router 3&#x6309;&#x9700;&#x52A0;&#x8F7D;&#x95EE;&#x9898;&#x89E3;&#x51B3;</h1>
 
 <p>1&#x3001;&#x9700;&#x8981;&#x5728;entry&#x4E2D;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x62C6;&#x5206;&#x7684;&#x63D2;&#x4EF6;</p>
-<pre data-role="codeBlock" data-info="javascript" class="language-javascript">  <span class="token keyword">const</span> <span class="token function-variable function">about</span> <span class="token operator">=</span> <span class="token punctuation">(</span>location<span class="token punctuation">,</span> cb<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        require<span class="token punctuation">.</span><span class="token function">ensure</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> require <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-            <span class="token function">cb</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../Component/about&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string">&apos;about&apos;</span><span class="token punctuation">)</span>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">  <span class="token comment">//1&#x3001;&#x5B9A;&#x4E49;&#x63A5;&#x6536;this.props.children&#x7684;&#x7EC4;&#x4EF6;</span>
+  <span class="token keyword">class</span> <span class="token class-name">Layout</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//2&#x3001;&#x5B9A;&#x4E49;getComponent</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">,</span>
+    childRoutes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">,</span>
+        path<span class="token punctuation">:</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">,</span>
+        <span class="token function">getComponent</span><span class="token punctuation">(</span>location<span class="token punctuation">,</span> cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            require<span class="token punctuation">.</span><span class="token function">ensure</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>require<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token function">cb</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;../Component/test&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//3&#x3001;&#x5F15;&#x7528;getComponent&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x653E;&#x5230;childRoutes&#x91CC;</span>
+  <span class="token keyword">import</span> test <span class="token keyword">from</span> <span class="token string">&quot;../Component/getComponent&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+    component<span class="token punctuation">:</span> Layout<span class="token punctuation">,</span>
+    childRoutes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      test
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token comment">//4&#x3001;&#x5C06;&#x7B2C;&#x4E09;&#x6B65;&#x653E;&#x5165;&#x5230;Router&#x91CC;&#x9762;{Routes}</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Router routes<span class="token operator">=</span><span class="token punctuation">{</span>Routes<span class="token punctuation">}</span> history<span class="token operator">=</span><span class="token punctuation">{</span>hashHistory<span class="token punctuation">}</span> <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>Router<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 </pre><blockquote>
 <p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x3002;require(&apos;../Component/about&apos;).default &#x5FC5;&#x987B;&#x540E;&#x9762;&#x8DDF;&#x4E0A; default&#xFF0C;&#x5426;&#x5219;this.props.children&#x4F1A;&#x662F;undefined&#x3002;</p>
 </blockquote>
