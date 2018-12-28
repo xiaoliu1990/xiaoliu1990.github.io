@@ -1,6 +1,5 @@
 # react-router 3按需加载问题解决
 
-1、需要在entry中配置需要拆分的插件
 ```javascript
   //1、定义接收this.props.children的组件
   class Layout extends Component {
