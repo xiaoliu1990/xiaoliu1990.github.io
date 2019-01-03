@@ -25,7 +25,7 @@
   npm install axios
 ```
 
-7、引入elementh和axios，在main.js文件夹里面引入 element.js是element插件的配置文件，httpIntercept.js是axios拦截器，element.js查看官网说明 http://element-cn.eleme.io/#/zh-CN/component/quickstart
+7、引入elemen和axios，在main.js文件夹里面引入 element.js是element插件的配置文件，httpIntercept.js是axios拦截器，element.js查看官网说明 http://element-cn.eleme.io/#/zh-CN/component/quickstart
 ```javascript
   import Vue from 'vue'
   import App from './App.vue'
