@@ -23,3 +23,18 @@
 ```
 >注意：target必须要加http:// ，单独//不行，必须强制 http://否则就会报错
 
+2、运用axios调用接口
+```javascript
+  created: function () {
+    this.$axios({
+      url: '/api/abc',
+      data: {
+        'name': '小刘',
+        'sex': '男'
+      },
+      method: 'post'
+    }).then((res) => {
+      console.log(res)
+    })
+  }
+```
