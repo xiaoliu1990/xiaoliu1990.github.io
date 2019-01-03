@@ -21,7 +21,7 @@
     }
   }
 ```
->注意：target必须要加http:// ，单独//不行，必须强制 http://否则就会报错
+>注意：target必须要加http:// ，单独//不行，必须强制 http:// 否则就会报错
 
 2、运用axios调用接口
 ```javascript
