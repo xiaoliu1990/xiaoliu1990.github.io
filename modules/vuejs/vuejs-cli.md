@@ -116,7 +116,8 @@
       proxy: {
         '/api': {
           target: 'http://www.baidu.com', //接口地址
-          changeOrigin: true, //是否跨域
+          ws: true, //是否跨域
+          changeOrigin: true, //是否需要虚拟主机站点
           pathRewrite: {
             '^/api': '' //重写接口地址
           }
