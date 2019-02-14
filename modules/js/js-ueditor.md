@@ -17,7 +17,7 @@
     window['ZeroClipboard'] = ZeroClipboard;
   });
 ```
->这种模式在使用的时候我在用的时候报Cannot read property 'config' of undefined,所以我用了第二种方法，直接修改ZeroClipboard 源码
+>了第二种方法，直接修改ZeroClipboard 源码
 ```javascript
   //找到
 
