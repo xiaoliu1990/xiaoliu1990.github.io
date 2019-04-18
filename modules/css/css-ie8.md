@@ -43,5 +43,3 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.2,M12=0,M21=0,M22=1.2,SizingMethod='auto expand')progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=0,strength=10)progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=90,strength=10)progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=10)progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=270,strength=10)";
 	margin-top: -45px\0;position:relative\0;z-index: 20\0;
 ```css
-
-二十如羊，三十如狼，四十如虎，五十坐地能吸土，六十隔墙吸老鼠，七十大炮也落伍，八十神仙也犯苦，九十大禹不敢堵，一百上天擒佛祖
