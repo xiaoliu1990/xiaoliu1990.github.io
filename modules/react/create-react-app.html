@@ -280,6 +280,19 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token property">&quot;version&quot;</span><span class="token operator">:</span><span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span>
   <span class="token property">&quot;homepage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span>
 <span class="token punctuation">}</span>
+</pre><h1 class="mume-header" id="create-react-app%E6%89%93%E5%8C%85%E5%8F%96%E6%B6%88map%E6%96%87%E4%BB%B6">create-react-app&#x6253;&#x5305;&#x53D6;&#x6D88;map&#x6587;&#x4EF6;</h1>
+
+<blockquote>
+<p>&#x6253;&#x5F00;package.json&#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&quot;scripts&quot;&#x6807;&#x7B7E;&#x5904;&#x7684;&quot;build&quot;&#x90A3;&#x884C;&#xFF1B;<br>
+&#x4FEE;&#x6539;&#x6253;&#x5305;&#x7684;&#x547D;&#x4EE4;&#x4E3A;cross-env GENERATE_SOURCEMAP=false<br>
+&#x6CE8;&#x610F;&#xFF1A;&#x5FC5;&#x987B;&#x5148;&#x4E0B;&#x8F7D;cross-env&#x5305;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-app-rewired start&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env GENERATE_SOURCEMAP=false react-app-rewired build&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-app-rewired test --env=jsdom&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;eject&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts eject&quot;</span>
+<span class="token punctuation">}</span>
 </pre>
       </div>
       
