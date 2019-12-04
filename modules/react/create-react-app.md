@@ -16,3 +16,15 @@
   "homepage": "./"
 }
 ```
+# create-react-app打包取消map文件
+>打开package.json文件，找到"scripts"标签处的"build"那行；
+>修改打包的命令为cross-env GENERATE_SOURCEMAP=false
+>注意：必须先下载cross-env包
+```json
+"scripts": {
+  "start": "react-app-rewired start",
+  "build": "cross-env GENERATE_SOURCEMAP=false react-app-rewired build",
+  "test": "react-app-rewired test --env=jsdom",
+  "eject": "react-scripts eject"
+}
+```
