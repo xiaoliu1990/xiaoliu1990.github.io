@@ -263,13 +263,15 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="create-react-app%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95">create-react-app&#x5982;&#x4F55;&#x66F4;&#x6539;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</h1>
+      <h1 class="mume-header" id="create-react-app-react-router-512-antd-mobile-%E8%84%9A%E6%89%8B%E6%9E%B6">create-react-app + react-router 5.1.2 + antd-mobile &#x811A;&#x624B;&#x67B6;</h1>
+
+<h2 class="mume-header" id="create-react-app%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95">create-react-app&#x5982;&#x4F55;&#x66F4;&#x6539;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</h2>
 
 <pre data-role="codeBlock" data-info="javascript" class="language-javascript">  <span class="token comment">/*&#x5728; github issue &#x91CC;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x4E86;
   &#x5728; config-overrides.js &#xFF0C;&#x4FEE;&#x6539; create-react-app &#x4E2D;&#x7684; paths.appBuild &#x53D8;&#x91CF;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;*/</span>
   <span class="token keyword">const</span> paths <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;react-scripts/config/paths&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   paths<span class="token punctuation">.</span>appBuild <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>paths<span class="token punctuation">.</span>appBuild<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&apos;dist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x4FEE;&#x6539;&#x6253;&#x5305;&#x76EE;&#x5F55;</span>
-</pre><h1 class="mume-header" id="create-react-app%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84">create-react-app&#x5982;&#x4F55;&#x66F4;&#x6539;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</h1>
+</pre><h2 class="mume-header" id="create-react-app%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84">create-react-app&#x5982;&#x4F55;&#x66F4;&#x6539;&#x6253;&#x5305;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</h2>
 
 <blockquote>
 <p>&#x5728;package.json &#x52A0;&#x5165;<br>
@@ -280,7 +282,7 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token property">&quot;version&quot;</span><span class="token operator">:</span><span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span>
   <span class="token property">&quot;homepage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./&quot;</span>
 <span class="token punctuation">}</span>
-</pre><h1 class="mume-header" id="create-react-app%E6%89%93%E5%8C%85%E5%8F%96%E6%B6%88map%E6%96%87%E4%BB%B6">create-react-app&#x6253;&#x5305;&#x53D6;&#x6D88;map&#x6587;&#x4EF6;</h1>
+</pre><h2 class="mume-header" id="create-react-app%E6%89%93%E5%8C%85%E5%8F%96%E6%B6%88map%E6%96%87%E4%BB%B6">create-react-app&#x6253;&#x5305;&#x53D6;&#x6D88;map&#x6587;&#x4EF6;</h2>
 
 <blockquote>
 <p>&#x6253;&#x5F00;package.json&#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&quot;scripts&quot;&#x6807;&#x7B7E;&#x5904;&#x7684;&quot;build&quot;&#x90A3;&#x884C;&#xFF1B;<br>
@@ -293,6 +295,57 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-app-rewired test --env=jsdom&quot;</span><span class="token punctuation">,</span>
   <span class="token property">&quot;eject&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react-scripts eject&quot;</span>
 <span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id></h3>
+
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token comment">/*&#x901A;&#x8FC7;process.env.npm_lifecycle_event&#x83B7;&#x53D6;package.json&#x4E2D;&#x7684;scripts
+&#x542F;&#x52A8;&#x7C7B;&#x578B;&#xFF08;start&#xFF0C;test&#xFF0C;build&#x7B49;&#xFF09;&#xFF0C;&#x5206;&#x522B;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x7684;&#x63A5;&#x53E3;&#x5730;&#x5740;*/</span>
+<span class="token keyword">const</span> <span class="token constant">ENVIRONMENT</span> <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>npm_lifecycle_event<span class="token punctuation">;</span>
+<span class="token keyword">let</span> serverUrl<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token constant">ENVIRONMENT</span> <span class="token operator">===</span> <span class="token string">&quot;start&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  serverUrl<span class="token operator">=</span><span class="token string">&apos;//www.api.com/api/start&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token constant">ENVIRONMENT</span> <span class="token operator">===</span> <span class="token string">&quot;test&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  serverUrl<span class="token operator">=</span><span class="token string">&apos;//www.api.com/api/test&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">ENVIRONMENT</span> <span class="token operator">===</span> <span class="token string">&quot;build&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  serverUrl<span class="token operator">=</span><span class="token string">&apos;//www.api.com/api/build&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</pre><h3 class="mume-header" id="override-%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">override &#x57FA;&#x672C;&#x914D;&#x7F6E;</h3>
+
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">override</span><span class="token punctuation">(</span>
+  <span class="token comment">//&#x8BBE;&#x7F6E;&#x6309;&#x9700;&#x52A0;&#x8F7D; babel-plugin-import</span>
+  <span class="token function">fixBabelImports</span><span class="token punctuation">(</span><span class="token string">&apos;import&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    libraryName<span class="token punctuation">:</span> <span class="token string">&apos;antd-mobile&apos;</span><span class="token punctuation">,</span>
+    style<span class="token punctuation">:</span> <span class="token string">&apos;css&apos;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">//&#x8BBE;&#x7F6E;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x522B;&#x540D;</span>
+  <span class="token function">addWebpackAlias</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">&quot;modules&quot;</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src/modules&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;common&quot;</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src/common&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;components&quot;</span><span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src/components&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">//less&#x914D;&#x7F6E;&#x51FD;&#x6570;</span>
+  <span class="token function">addLessLoader</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    javascriptEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    modifyVars<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">&apos;@primary-color&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;#1DA57A&apos;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">//&#x9002;&#x914D;&#x901A;&#x5E38;&#x91C7;&#x7528; rem &#x5E03;&#x5C40;</span>
+  <span class="token function">addPostcssPlugins</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;postcss-pxtorem&apos;</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    rootValue<span class="token punctuation">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+    propList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;*&apos;</span><span class="token punctuation">]</span>
+    <span class="token comment">// propList: [&apos;*&apos;, &apos;!border*&apos;, &apos;!font-size*&apos;, &apos;!letter-spacing&apos;],</span>
+    <span class="token comment">// propWhiteList: []</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">//&#x5B9A;&#x4E49;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+  <span class="token function">addWebpackPlugin</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">&apos;process.env&apos;</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+      <span class="token string">&apos;SERVER_URL_START&apos;</span><span class="token punctuation">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>serverUrl<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;SERVER_URL_TEST&apos;</span><span class="token punctuation">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>serverUrl<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;SERVER_URL_PRD&apos;</span><span class="token punctuation">:</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>serverUrl<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </pre>
       </div>
       
